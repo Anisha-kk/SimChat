@@ -13,7 +13,7 @@ chat_router = APIRouter()
 @chat_router.post("/chat")
 def Chat(input:Message,rules=Depends(get_rules)):
     '''
-    Please enter your queries. To stop, type 'exit'.
+    Please enter your queries. To stop, type 'bye'.
     '''
     #Converting query to lowercase
     query = input.text.lower()
